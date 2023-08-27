@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#362C35"
+    tools:context=".activity.Login">
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="230dp"
+        android:src="@drawable/baseline_account_circle_24"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/edusername"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:hint="Tên đăng nhập"
+        android:textSize="15dp"
+        android:textColorHint="@color/c_hintInput"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="8dp"
+        android:drawablePadding="8dp"
+        android:inputType="text"
+        android:textColor="@color/c_textInput"
+        android:drawableStart="@drawable/ic_user"
+        android:background="@drawable/textlogin"
+        />
+
+    <TextView
+        android:id="@+id/login_error_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:textSize="15dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+
+        />
+
+
+    <EditText
+        android:id="@+id/edpassword"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:hint="Mật khẩu"
+        android:textColorHint="@color/c_hintInput"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="8dp"
+        android:textSize="15dp"
+        android:drawablePadding="8dp"
+        android:inputType="textPassword"
+        android:textColor="@color/c_textInput"
+        android:drawableStart="@drawable/ic_password"
+        android:background="@drawable/textlogin"
+        />
+
+    <TextView
+        android:id="@+id/login_error_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:textSize="15dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="28dp"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quên mật khẩu ?"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="right"
+        android:textSize="12dp"
+        android:textColor="#D3CDBE"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+        <CheckBox
+            android:id="@+id/login_chk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/white"
+            android:button="@drawable/checkbox_custom"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp"
+            android:text="Nhớ mật khẩu ?"
+            android:textColor="#FFFFFF"
+            />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_Login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/bg_btn"
+        android:textSize="20dp"
+        android:text="Đăng Nhập"
+        android:textAllCaps="false"
+        android:textColor="#362C35"/>
+
+    <TextView
+        android:id="@+id/tvDangKi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Đăng Ký"
+        android:textSize="20dp"
+        android:textColor="#EFE4C8"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

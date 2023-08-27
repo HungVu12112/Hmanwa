@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#362C35"
+    tools:context=".activity.Detail_Comic">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/itemDetail_CoordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/itemDetail_appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="wrap_content"
+                android:layout_height="400dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                android:background="#5E565D">
+                <ImageView
+                    android:id="@+id/imgitembanner_comic"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:src="@drawable/anh3"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax"/>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/itemDetail_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    app:layout_collapseMode="pin"
+                    >
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/img_13"
+                        android:id="@+id/itemDetail_back"/>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/itemDetail_NestesScrollView"
+            android:layout_below="@id/itemDetail_appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/itemDetail_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/itemDetail_CoordinatorLayout"
+                    android:orientation="vertical">
+                    <!--        Name-->
+                    <TextView
+                        android:id="@+id/tvitemName_comic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="9"
+                        android:gravity="center_vertical"
+                        android:padding="16dp"
+                        android:text="Tam quốc diễn nghĩa"
+                        android:textColor="#D6D6D6"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvitemNametg_comic"
+                        android:layout_marginLeft="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tác giả"
+                        android:textSize="17dp"
+                        android:textStyle="italic"
+                        android:textColor="#D6D6D6" />
+                    <TextView
+                        android:id="@+id/tvitemNamxb_comic"
+                        android:layout_marginLeft="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Năm xuất bản"
+                        android:textSize="17dp"
+                        android:textStyle="italic"
+                        android:textColor="#D6D6D6" />
+
+                    <TextView
+                        android:id="@+id/tvitemDes_comic"
+                        android:layout_margin="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chi tiết về truyện"
+                        android:textSize="15dp"
+
+                        android:textColor="#D6D6D6" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="10"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="20dp"
+                        >
+                        <ImageView
+                            android:layout_weight="1"
+                            android:layout_marginLeft="16dp"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/baseline_share_24"
+                            android:id="@+id/imgitemShare"/>
+                        <ImageView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_height="50dp"
+                            android:id="@+id/savefavorite"
+                            android:src="@drawable/favorite32"
+                            />
+                        <android.widget.Button
+                            android:id="@+id/imgitemRead_comic"
+                            android:layout_marginLeft="18dp"
+                            android:layout_weight="8"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:textColor="#D6D6D6"
+                            android:background="@drawable/button_bg"
+                            android:text="Bắt đọc truyện"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bình luận nổi bật"
+                            android:layout_marginLeft="16dp"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="80dp"
+                            android:id="@+id/recyccelViewComent"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <LinearLayout
+        android:weightSum="20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_weight="17"
+            android:id="@+id/edComment"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:hint="Nói gì đi nào ..."
+            android:textSize="15dp"
+            android:textColorHint="@color/c_hintInput"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:paddingStart="8dp"
+            android:drawablePadding="8dp"
+            android:inputType="text"
+            android:textColor="@color/c_textInput"
+            android:background="@drawable/textlogin"
+            />
+        <ImageView
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:src="@drawable/baseline_send_24"
+            android:id="@+id/imgSendComment"/>
+    </LinearLayout>
+
+</RelativeLayout>
